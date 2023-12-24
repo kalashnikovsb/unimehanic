@@ -168,6 +168,7 @@ inputElement.addEventListener('keydown', (evt) => {
 
 
 const reRenderPosts = () => {
+  
   if (!tableElement) {
     return;
   }
@@ -175,7 +176,9 @@ const reRenderPosts = () => {
   if (currentInput.length <= 3) {
     renderPosts(currentPosts, tableElement);
   } else {
-    currentPosts = currentPosts.filter(getFilteredPosts)
+    
+    currentPosts = allPosts.slice().filter(getFilteredPosts);
+    console.log(currentPosts);
     renderPosts(currentPosts, tableElement);
   }
 };
