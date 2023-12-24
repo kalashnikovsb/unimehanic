@@ -6,7 +6,6 @@ let idCellElement = null;
 let titleCellElement = null;
 let bodyCellElement =  null;
 
-
 const SortTypes = {
   LOW_HIGH: 'LOW_HIGH',
   HIGH_LOW: 'HIGH_LOW',
@@ -57,7 +56,6 @@ const renderTable = (posts) => {
 };
 
 
-// Фильтрует посты по введенному тексту
 const getFilteredPosts = (post) => {
   if (!currentInput) {
     return true;
@@ -69,7 +67,6 @@ const getFilteredPosts = (post) => {
 };
 
 
-// Выводит строки таблицы
 const renderPosts = (posts, container) => {
   const fragment = document.createDocumentFragment();
   posts.forEach((post) => {
@@ -105,7 +102,6 @@ const deletePosts = () => {
 };
 
 
-// Выводит заголовочную строку таблицы
 const renderHeader = (container) => {
   const headerRow = document.createElement('tr');
   headerRow.style = 'color: blue; cursor: pointer';
@@ -138,25 +134,21 @@ const renderHeader = (container) => {
 
   userIdElement.addEventListener('click', () => {
     currentPosts = sortByUserId();
-    // console.log(currentPosts);
     reRenderPosts();
   });
 
   idCellElement.addEventListener('click', () => {
     currentPosts = sortById();
-    // console.log(currentPosts);
     reRenderPosts();
   });
 
   titleCellElement.addEventListener('click', () => {
     currentPosts = sortByTitle();
-    // console.log(currentPosts);
     reRenderPosts();
   });
 
   bodyCellElement.addEventListener('click', () => {
     currentPosts = sortByBody();
-    // console.log(currentPosts);
     reRenderPosts();
   });
 };
@@ -193,7 +185,6 @@ const sortByUserId = () => {
   sortingSettings.sortByTitle = null;
   sortingSettings.sortByBody = null;
 
-  console.log(sortingSettings);
   switch(sortingSettings.sortByUserId) {
     case null:
       sortingSettings.sortByUserId = SortTypes.HIGH_LOW;
@@ -213,7 +204,6 @@ const sortById = () => {
   sortingSettings.sortByTitle = null;
   sortingSettings.sortByBody = null;
 
-  console.log(sortingSettings);
   switch(sortingSettings.sortById) {
     case null:
       sortingSettings.sortById = SortTypes.HIGH_LOW;
@@ -227,41 +217,40 @@ const sortById = () => {
   }
 };
 
+
 const sortByTitle = () => {
   sortingSettings.sortByUserId = null;
   sortingSettings.sortById = null;
   sortingSettings.sortByBody = null;
 
-  console.log(sortingSettings);
   switch(sortingSettings.sortByTitle) {
     case null:
       sortingSettings.sortByTitle = SortTypes.HIGH_LOW;
-      return currentPosts.sort((a, b) => b.title.length - a.title.length).slice();
+      return currentPosts.sort((a, b) => a.title.length - b.title.length).slice();
     case SortTypes.HIGH_LOW:
       sortingSettings.sortByTitle = SortTypes.LOW_HIGH;
-      return currentPosts.sort((a, b) => a.title.length - b.title.length).slice();
+      return currentPosts.sort((a, b) => b.title.length - a.title.length).slice();
     case SortTypes.LOW_HIGH:
       sortingSettings.sortByTitle = SortTypes.HIGH_LOW;
-      return currentPosts.sort((a, b) => b.title.length - a.title.length).slice();
+      return currentPosts.sort((a, b) => a.title.length - b.title.length).slice();
   }
 };
 
 
 const sortByBody = () => {
-  sortingSettings.sortByUserId = SortTypes.null;
-  sortingSettings.sortById = SortTypes.null;
-  sortingSettings.sortByTitle = SortTypes.null;
+  sortingSettings.sortByUserId = null;
+  sortingSettings.sortById = null;
+  sortingSettings.sortByTitle = null;
 
-  console.log(sortingSettings);
   switch(sortingSettings.sortByBody) {
     case null:
       sortingSettings.sortByBody = SortTypes.HIGH_LOW;
-      return currentPosts.sort((a, b) => b.body.length - a.body.length).slice();
+      return currentPosts.sort((a, b) => a.body.length - b.body.length).slice();
     case SortTypes.HIGH_LOW:
       sortingSettings.sortByBody = SortTypes.LOW_HIGH;
-      return currentPosts.sort((a, b) => a.body.length - b.body.length).slice();
+      return currentPosts.sort((a, b) => b.body.length - a.body.length).slice();
     case SortTypes.LOW_HIGH:
       sortingSettings.sortByBody = SortTypes.HIGH_LOW;
-      return currentPosts.sort((a, b) => b.body.length - a.body.length).slice();
+      return currentPosts.sort((a, b) => a.body.length - b.body.length).slice();
   }
 };
