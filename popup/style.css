@@ -2,8 +2,147 @@ body {
   margin: 0;
 }
 
+
+
+
+.popup {
+  background: #dddddd;
+  width: 754px;
+  box-sizing: border-box;
+  margin: auto;
+  margin-left: calc(50% - 377px);
+  padding-top: 53px;
+  padding-bottom: 53px;
+  padding-left: 98px;
+  padding-right: 98px;
+}
+
+.popup__title {
+  font-family: "Montserrat", "Arial", "sans-serif";
+  font-size: 28px;
+  line-height: 34px;
+  font-weight: 800;
+  color: #0c1014;
+  margin-top: 0;
+  margin-bottom: 35px;
+}
+
+.popup__form {
+  background: #ffffff;
+}
+
+
+
+
+
+.input {
+  position: relative;
+}
+
+.input--logo::before {
+  content: "";
+  position: absolute;
+  right: 16px;
+  top: calc(50% - 11px);
+  width: 22px;
+  height: 22px;
+  /* background: red; */
+}
+
+.input--corner {
+  background: url("") 50% 50% no-repeat #ffffff;
+}
+
+.input--global {
+  background: url("") 50% 50% no-repeat #ffffff;
+}
+
+.input--vk {
+  background: url("") 50% 50% no-repeat #ffffff;
+}
+
+.input--ok {
+  background: url("") 50% 50% no-repeat #ffffff;
+}
+
+.input--fb {
+  background: url("") 50% 50% no-repeat #ffffff;
+}
+
+.input--instagram {
+  background: url("") 50% 50% no-repeat #ffffff;
+}
+
+.input--youtube {
+  background: url("") 50% 50% no-repeat #ffffff;
+}
+
+.input__label {
+  position: absolute;
+  font-family: "PT Sans", Arial, sans-serif;
+  font-size: 12px;
+  line-height: 16px;
+  font-weight: 400;
+  color: #6a6e72;
+  padding-left: 13px;
+  margin-left: 16px;
+  top: 8px;
+}
+
+.input__label::before {
+  content: "✱";
+  color: #d90000;
+  position: absolute;
+  left: 0;
+}
+
+.input__input {
+  border: 1px solid #d6dade;
+  border-radius: 2px;
+  font-family: "PT Sans", Arial, sans-serif;
+  font-size: 16px;
+  line-height: 24px;
+  color: #0c1014;
+  font-weight: 400;
+  padding-top: 22px;
+  padding-bottom: 8px;
+  padding-left: 16px;
+  padding-right: 16px;
+  box-sizing: border-box;
+  width: 100%;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 .avatar {
-  background: #ddd;
+  background: #cccccc;
   width: 166px;
   position: relative;
 }
@@ -33,7 +172,7 @@ body {
   border-radius: 50%;
   width: 166px;
   height: 166px;
-  background: url("./avatar.png") 50% 20% no-repeat #000000;
+  background: url("./images/avatar.png") 50% 20% no-repeat #000000;
   position: relative;
 }
 
@@ -57,7 +196,7 @@ body {
   left: calc(50% - 15px);
   width: 30px;
   height: 30px;
-  background: url("./avatar-icon.svg") 50% 50% no-repeat;
+  background: url("./images/avatar-icon.svg") 50% 50% no-repeat;
   overflow: hidden;
 }
 
@@ -89,6 +228,6 @@ body {
   right: 5px;
   position: absolute;
   z-index: 10;
-  background: url("./icon-cross.svg") 50% 50% no-repeat #ffffff;
+  background: url("./images/cross-icon.svg") 50% 50% no-repeat #ffffff;
   cursor: pointer;
 }

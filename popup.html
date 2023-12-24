@@ -16,12 +16,50 @@
       <form class="form popup__form" action="https://echo.htmlacademy.ru" method="POST" enctype='multipart/form-data'>
 
         <div class="avatar form__avatar">
-          <label class="avatar__label">Логотип (jpeg, png)</label>
+          <label class="avatar__label" for="avatar">Логотип (jpeg, png)</label>
           <button class="avatar__button" aria-label></button>
           <div class="avatar__input-wrap">
-            
-            <input class="avatar__input" type="file" name="avatar" acceps="image/jpg, image/jpeg, image/png" placeholder="123">
+            <input class="avatar__input" type="file" name="avatar" acceps="image/jpg, image/jpeg, image/png" placeholder="123" id="avatar">
           </div>   
+        </div>
+
+        <div class="input form__input-item">
+          <label class="input__label" for="company-name">Название организации</label>
+          <input class="input__input" type="text" id="company-name" name="company-name" value="АВЦ">
+        </div>
+        <div class="input form__input-item">
+          <label class="input__label" for="phone-number">Телефон</label>
+          <input class="input__input" type="text" id="phone-number" name="phone-number" value="+7 933 848-34-33">
+        </div>
+        <div class="input form__input-item">
+          <label class="input__label" for="email">E-mail</label>
+          <input class="input__input" type="text" id="email" name="email" value="avc@gmail.com">
+        </div>
+        <div class="input input--logo input--corner form__input-item">
+          <label class="input__label" for="direction">Направление</label>
+          <input class="input__input" type="text" id="direction" name="direction" value="Экология">
+        </div>
+        <div class="input input--logo input--global form__input-item">
+          <input class="input__input" type="text" id="website" name="website" value="avc.ru">
+        </div>
+        <div class="input input--logo input--vk form__input-item">
+          <input class="input__input" type="text" id="vk" name="vk" value="vk.com/shans">
+        </div>
+        <div class="input input--logo input--ok form__input-item">
+          <input class="input__input" type="text" id="ok" name="ok" value="ok.com/shans">
+        </div>
+        <div class="input input--logo input--fb form__input-item">
+          <input class="input__input" type="text" id="fb" name="fb" value="facebook.com/shans">
+        </div>
+        <div class="input input--logo input--instagram form__input-item">
+          <input class="input__input" type="text" id="instagram" name="instagram" value="instagram.com/shans">
+        </div>
+        <div class="input input--logo input--youtube form__input-item">
+          <input class="input__input" type="text" id="youtube" name="youtube" value="youtube.com/shans">
+        </div>
+        <div class="input form__input-item">
+          <label class="input__label" for="supervisor">Руководитель</label>
+          <input class="input__input" type="text" id="supervisor" name="supervisor" value="Александров Иван Васильевич">
         </div>
 
       </form>
