@@ -162,6 +162,7 @@ inputElement.addEventListener('input', (evt) => {
 inputElement.addEventListener('keydown', (evt) => {
   if (evt.keyCode === 8 && evt.target.value.length === 1) {
     currentPosts = allPosts.slice();
+    reRenderPosts();
   }
 });
 
