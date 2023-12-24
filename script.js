@@ -188,14 +188,14 @@ const sortByUserId = () => {
 
   switch(sortingSettings.sortByUserId) {
     case null:
-      sortingSettings.sortByUserId = SortTypes.HIGH_LOW;
-      return currentPosts.sort((a, b) => b.userId - a.userId).slice();
-    case SortTypes.HIGH_LOW:
       sortingSettings.sortByUserId = SortTypes.LOW_HIGH;
       return currentPosts.sort((a, b) => a.userId - b.userId).slice();
     case SortTypes.LOW_HIGH:
       sortingSettings.sortByUserId = SortTypes.HIGH_LOW;
       return currentPosts.sort((a, b) => b.userId - a.userId).slice();
+    case SortTypes.HIGH_LOW:
+      sortingSettings.sortByUserId = SortTypes.LOW_HIGH;
+      return currentPosts.sort((a, b) => a.userId - b.userId).slice();
   }
 };
 
@@ -207,14 +207,14 @@ const sortById = () => {
 
   switch(sortingSettings.sortById) {
     case null:
-      sortingSettings.sortById = SortTypes.HIGH_LOW;
-      return currentPosts.sort((a, b) => b.id - a.id).slice();
-    case SortTypes.HIGH_LOW:
       sortingSettings.sortById = SortTypes.LOW_HIGH;
       return currentPosts.sort((a, b) => a.id - b.id).slice();
     case SortTypes.LOW_HIGH:
       sortingSettings.sortById = SortTypes.HIGH_LOW;
       return currentPosts.sort((a, b) => b.id - a.id).slice();
+    case SortTypes.HIGH_LOW:
+      sortingSettings.sortById = SortTypes.LOW_HIGH;
+      return currentPosts.sort((a, b) => a.id - b.id).slice();
   }
 };
 
