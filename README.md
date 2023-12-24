@@ -8,4 +8,4 @@
 
 Ссылка на демо: https://kalashnikovsb.github.io/unimehanic/
 
-Скрип: https://jsonplaceholder.typicode.com/posts
+Скрип: https://kalashnikovsb.github.io/unimehanic/script.js
