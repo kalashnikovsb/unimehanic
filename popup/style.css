@@ -1,0 +1,65 @@
+body {
+  margin: 0;
+}
+
+.avatar {
+  background: #ccc;
+  width: 166px;
+}
+
+.avatar__label {
+
+}
+
+.avatar__input-wrap {
+  overflow: hidden;
+  border-radius: 50%;
+  width: 166px;
+  height: 166px;
+  background: url("./avatar.png") 50% 20% no-repeat #000000;
+  position: relative;
+}
+
+.avatar__input {
+  width: 166px;
+  height: 366px;
+  margin-top: -100px; 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: rgba(0, 0, 0, 0.6);
+  /* position: absolute; */
+  overflow: hidden;
+  border-radius: 50%;
+}
+
+.avatar__input::before {
+  content: "";
+  position: absolute;
+  top: calc(50% - 25px);
+  left: calc(50% - 15px);
+  width: 30px;
+  height: 30px;
+  background: url("./avatar-icon.svg") 50% 50% no-repeat;
+  overflow: hidden;
+}
+
+.avatar__input::after {
+  content: "Выберите\0aфайл";
+  position: absolute;
+  top: calc(50% + 10px);
+  left: calc(50% - 50px);
+  width: 100px;
+  height: 60px;
+  font-family: "PT Sans";
+  font-weight: 400;
+  font-size: 19px;
+  line-height: 28px;
+  color: #ffffff;
+  text-decoration: underline;
+  text-align: center;
+}
+
+.avatar__button {
+
+}
