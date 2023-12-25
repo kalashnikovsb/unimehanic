@@ -1,9 +1,7 @@
 ## 2 практическое задание
 
-Функция которая делает запрос на 27 строке скрипта.
+Функция делает запрос и выводит таблицу. 
 
-Функция которая выводит данные в виде таблицы на 47 строке скрипта.
+Сортировка, фильтрация по введенной строке в задании 3
 
-Ссылка на демо: https://kalashnikovsb.github.io/unimehanic/
-
-Скрипт: https://kalashnikovsb.github.io/unimehanic/script.js
+Ссылка на демо: https://kalashnikovsb.github.io/unimehanic/practice2/index.html
