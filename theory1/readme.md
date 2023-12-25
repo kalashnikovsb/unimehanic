@@ -6,5 +6,7 @@
 
 2е решение, использовать замыкания для запоминания текущего i.
 
+Ссылка на скрипт: https://kalashnikovsb.github.io/unimehanic/theory1/script.js
+
 
 <image src="picture.jpg" alt="Текст с описанием картинки">
