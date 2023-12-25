@@ -13,7 +13,7 @@ https://kalashnikovsb.github.io/unimehanic/theory1/script.js
 
 Мобильная адаптация срабатывает при ширине меньше 780px.
 
-Демо: https://kalashnikovsb.github.io/unimehanic/popup.html
+Демо: https://kalashnikovsb.github.io/unimehanic/practice1/index.html
 
 ## 2 практическое задание
 
