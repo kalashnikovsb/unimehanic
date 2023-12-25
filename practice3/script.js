@@ -156,8 +156,10 @@ const renderHeader = (container) => {
 
 inputElement.addEventListener('input', (evt) => {
   currentInput = evt.target.value;
+  currentPosts = allPosts.slice();
   reRenderPosts()
 });
+
 
 inputElement.addEventListener('keydown', (evt) => {
   if (evt.keyCode === 8 && evt.target.value.length === 1) {
@@ -168,16 +170,15 @@ inputElement.addEventListener('keydown', (evt) => {
 
 
 const reRenderPosts = () => {
-  
   if (!tableElement) {
     return;
   }
   deletePosts();
   if (currentInput.length <= 3) {
+    currentPosts = currentPosts.slice();
     renderPosts(currentPosts, tableElement);
   } else {
-    
-    currentPosts = allPosts.slice().filter(getFilteredPosts);
+    currentPosts = currentPosts.slice().filter(getFilteredPosts);
     renderPosts(currentPosts, tableElement);
   }
 };
