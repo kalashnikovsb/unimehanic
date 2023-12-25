@@ -26,4 +26,4 @@ https://kalashnikovsb.github.io/unimehanic/theory1/script.js
 
 ## 3 практическое задания
 
-Ссылка на демо: https://kalashnikovsb.github.io/unimehanic/
+Ссылка на демо: https://kalashnikovsb.github.io/unimehanic/practice3/index.html
