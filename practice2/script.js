@@ -3,6 +3,8 @@ const inputElement = document.querySelector('.table-input');
 let tableElement = null;
 
 
+// Функция делает запрос и выводит таблицу
+
 const requestAndRender = () => {
   fetch('https://jsonplaceholder.typicode.com/posts')
     .then((response) => {
