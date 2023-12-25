@@ -178,7 +178,6 @@ const reRenderPosts = () => {
   } else {
     
     currentPosts = allPosts.slice().filter(getFilteredPosts);
-    console.log(currentPosts);
     renderPosts(currentPosts, tableElement);
   }
 };
