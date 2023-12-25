@@ -35,8 +35,6 @@ const MAX_LENGTH = 11;
 const BACKSPACE_KEYCODE = 8;
 isPasted = false;
 
-console.log(phoneInput);
-
 const isNumber = (symbol) => (!isNaN(+symbol) && symbol !== ' ') ? true : false;
 
 // Очищает строку от букв и символов
