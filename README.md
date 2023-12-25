@@ -15,12 +15,15 @@ https://kalashnikovsb.github.io/unimehanic/theory1/script.js
 
 Демо: https://kalashnikovsb.github.io/unimehanic/popup.html
 
-## 2 и 3 практические задания
+## 2 практическое задание
 
-Функция которая делает запрос на 27 строке скрипта.
+Функция делает запрос и выводит таблицу. 
 
-Функция которая выводит данные в виде таблицы на 47 строке скрипта.
+Сортировка и фильтрация по введенной строке в задании 3.
+
+Ссылка на демо: https://kalashnikovsb.github.io/unimehanic/practice2/index.html
+
+
+## 3 практическое задания
 
 Ссылка на демо: https://kalashnikovsb.github.io/unimehanic/
-
-Скрипт: https://kalashnikovsb.github.io/unimehanic/script.js
