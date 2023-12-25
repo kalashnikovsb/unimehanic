@@ -3,6 +3,7 @@ const closePopupButton = document.querySelector('.close-popup');
 const popup = document.querySelector('.popup');
 const closeLink = popup.querySelector('.form__cancel-button');
 
+
 // Открытие закрытие попапа:
 
 const openPopup = () => {
@@ -27,6 +28,7 @@ const escPressHandler = (evt) => {
 
 openPopupButton.addEventListener('click', openPopup);
 closePopupButton.addEventListener('click', closePopup);
+
 
 // Валидация номера телефона
 
@@ -126,6 +128,9 @@ phoneInput.addEventListener('blur', (evt) => checkInputLength(evt));
 phoneInput.addEventListener('paste', phonePasteHandler);
 phoneInput.addEventListener('keydown', phoneBackspaceHandler);
 phoneInput.addEventListener('input', phoneInputHandler);
+
+
+
 
 
 
