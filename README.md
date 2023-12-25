@@ -29,4 +29,4 @@
 
 Ссылка на демо: https://kalashnikovsb.github.io/unimehanic/
 
-Скрип: https://kalashnikovsb.github.io/unimehanic/script.js
+Скрипт: https://kalashnikovsb.github.io/unimehanic/script.js
