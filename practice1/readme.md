@@ -6,4 +6,4 @@
 
 Мобильная адаптация срабатывает при ширине меньше 780px.
 
-Демо: https://kalashnikovsb.github.io/unimehanic/practise1/popup.html
+Демо: https://kalashnikovsb.github.io/unimehanic/practice1/popup.html
