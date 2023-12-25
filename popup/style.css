@@ -1,16 +1,19 @@
 body {
   margin: 0;
+  background: #ccc;
 }
 
-
-
-
 .popup {
-  background: #dddddd;
+  background: #ffffff;
+  border-radius: 12px;
+  position: absolute;
+  top: 0;
   width: 754px;
   box-sizing: border-box;
   margin: auto;
   margin-left: calc(50% - 377px);
+  margin-top: 20px;
+  margin-bottom: 20px;
   padding-top: 53px;
   padding-bottom: 53px;
   padding-left: 98px;
@@ -31,8 +34,83 @@ body {
   background: #ffffff;
 }
 
+@media (max-width: 780px) {
+  .popup {
+    margin: 0;
+    width: 100%;
+    border-radius: 0;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+}
+
+.form {
+  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: 362px 30px 166px;
+  grid-template-rows: repeat(11, 88px), 66px, 40px;
+}
+
+.form__avatar {
+  grid-column: 3 / 4;
+  grid-row: 1 / 4;
+}
 
 
+.form__input-item {
+  margin-bottom: 32px;
+  grid-column: 1 / 4;
+}
+
+.form__input-item--narrow {
+  grid-column: 1 / 2;
+}
+
+.form__submit-button {
+  height: 48px;
+  grid-column: 1 / -1;
+  border: none;
+  background: #e5266e;
+  border-radius: 2px;
+  font-family: "Lato", Arial, sans-serif;
+  font-size: 16px;
+  line-height: 18px;
+  font-weight: 400;
+  color: #ffffff;
+  cursor: pointer;
+}
+
+.form__cancel-wrap {
+  grid-column: 1 / -1;
+  text-align: center;
+  margin-top: 15px;
+  
+}
+
+.form__cancel-button {
+  background: none;
+  border: none;
+  font-family: "PT Sans", Arial, sans-serif;
+  font-size: 16px;
+  line-height: 24px;
+  color: #0848c0;
+  cursor: pointer;
+}
+
+
+@media (max-width: 780px) {
+  .form {
+    grid-template-columns: 1fr;
+  }
+
+  .form__avatar {
+    margin: auto;
+    grid-column: 1 / -1;
+    grid-row: 1 / 2;
+  }
+}
 
 
 .input {
@@ -42,39 +120,38 @@ body {
 .input--logo::before {
   content: "";
   position: absolute;
-  right: 16px;
+  right: 15px;
   top: calc(50% - 11px);
   width: 22px;
   height: 22px;
-  /* background: red; */
 }
 
-.input--corner {
-  background: url("") 50% 50% no-repeat #ffffff;
+.input--corner::before {
+  background: url("./images/corner-icon.svg") 50% 50% no-repeat;
 }
 
-.input--global {
-  background: url("") 50% 50% no-repeat #ffffff;
+.input--global::before {
+  background: url("./images/global-icon.svg") 50% 50% no-repeat;
 }
 
-.input--vk {
-  background: url("") 50% 50% no-repeat #ffffff;
+.input--vk::before {
+  background: url("./images/vk-icon.svg") 50% 50% no-repeat;
 }
 
-.input--ok {
-  background: url("") 50% 50% no-repeat #ffffff;
+.input--ok::before {
+  background: url("./images/ok-icon.svg") 50% 50% no-repeat;
 }
 
-.input--fb {
-  background: url("") 50% 50% no-repeat #ffffff;
+.input--fb::before {
+  background: url("./images/fb-icon.svg") 50% 50% no-repeat;
 }
 
-.input--instagram {
-  background: url("") 50% 50% no-repeat #ffffff;
+.input--instagram::before {
+  background: url("./images/instagram-icon.svg") 50% 50% no-repeat;
 }
 
-.input--youtube {
-  background: url("") 50% 50% no-repeat #ffffff;
+.input--youtube::before {
+  background: url("./images/youtube-icon.svg") 50% 50% no-repeat;
 }
 
 .input__label {
@@ -112,39 +189,17 @@ body {
   width: 100%;
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+.input__input--without-label {
+  padding-top: 15px;
+  padding-bottom: 15px;
+}
 
 .avatar {
-  background: #cccccc;
   width: 166px;
+  height: 232px;
   position: relative;
+  display: flex;
+  flex-direction: column;
 }
 
 .avatar__label {
@@ -224,10 +279,38 @@ body {
   border: 0;
   margin: 0;
   padding: 0;
-  bottom: 120px;
+  top: 45px;
   right: 5px;
   position: absolute;
   z-index: 10;
   background: url("./images/cross-icon.svg") 50% 50% no-repeat #ffffff;
   cursor: pointer;
+}
+
+@media (max-width: 780px) {
+  .avatar__label {
+    order: 3;
+  }
+
+  .avatar__input-wrap {
+    order: 1;
+  }
+
+  .avatar__button {
+    order: 2;
+    top: 15px;
+  }
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
 }

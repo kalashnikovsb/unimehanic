@@ -1,67 +1,79 @@
 <!DOCTYPE html>
-<html>
+<html lang="ru">
   <head>
     <meta charset="utf-8">
     <title>Тестовое задание</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="./popup/style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Lato:wght@700&family=Montserrat:wght@800&family=PT+Sans:wght@400;700&display=swap" rel="stylesheet">
   </head>
   <body>
+    <p>Так же попап закрывается от нажатия ESC и нажатия на кнопку "Отмена" у попапа</p>
+    <p>Валидация номера телефона сделана самостоятельно, не является внешней библиотекой</p>
+    <p>Мобильная адаптация срабатывает при ширине меньше 780px</p>
+    <button class="show-popup" type="button">Открыть попап</button>
+    <button class="close-popup" type="button">Закрыть попап</button>
     
-    <section class="popup">
+    
+    <section class="popup visually-hidden">
       <h1 class="popup__title">Стать партнёром проекта</h1>
 
       <form class="form popup__form" action="https://echo.htmlacademy.ru" method="POST" enctype='multipart/form-data'>
 
         <div class="avatar form__avatar">
           <label class="avatar__label" for="avatar">Логотип (jpeg, png)</label>
-          <button class="avatar__button" aria-label></button>
+          <button class="avatar__button" type="button"></button>
           <div class="avatar__input-wrap">
-            <input class="avatar__input" type="file" name="avatar" acceps="image/jpg, image/jpeg, image/png" placeholder="123" id="avatar">
+            <input class="avatar__input" type="file" name="avatar" accept="image/jpg, image/jpeg, image/png" id="avatar" required>
           </div>   
         </div>
 
-        <div class="input form__input-item">
+        <div class="input form__input-item form__input-item--narrow">
           <label class="input__label" for="company-name">Название организации</label>
-          <input class="input__input" type="text" id="company-name" name="company-name" value="АВЦ">
+          <input class="input__input" type="text" id="company-name" name="company-name" required>
         </div>
-        <div class="input form__input-item">
+        <div class="input form__input-item form__input-item--narrow">
           <label class="input__label" for="phone-number">Телефон</label>
-          <input class="input__input" type="text" id="phone-number" name="phone-number" value="+7 933 848-34-33">
+          <input class="input__input" type="tel" id="phone-number" name="phone-number" title="Введите телефон в формате +71234567890" placeholder="+7(___)___-__-__" required>
         </div>
-        <div class="input form__input-item">
+        <div class="input form__input-item form__input-item--narrow">
           <label class="input__label" for="email">E-mail</label>
-          <input class="input__input" type="text" id="email" name="email" value="avc@gmail.com">
+          <input class="input__input" type="text" id="email" name="email" placeholder="example@example.com" required>
         </div>
         <div class="input input--logo input--corner form__input-item">
           <label class="input__label" for="direction">Направление</label>
-          <input class="input__input" type="text" id="direction" name="direction" value="Экология">
+          <input class="input__input" type="text" id="direction" name="direction" placeholder="Направление" required>
         </div>
         <div class="input input--logo input--global form__input-item">
-          <input class="input__input" type="text" id="website" name="website" value="avc.ru">
+          <input class="input__input input__input--without-label" type="text" id="website" name="website" placeholder="google.com" required>
         </div>
         <div class="input input--logo input--vk form__input-item">
-          <input class="input__input" type="text" id="vk" name="vk" value="vk.com/shans">
+          <input class="input__input input__input--without-label" type="text" id="vk" name="vk" placeholder="vk.com/" required>
         </div>
         <div class="input input--logo input--ok form__input-item">
-          <input class="input__input" type="text" id="ok" name="ok" value="ok.com/shans">
+          <input class="input__input input__input--without-label" type="text" id="ok" name="ok" placeholder="ok.com/" required>
         </div>
         <div class="input input--logo input--fb form__input-item">
-          <input class="input__input" type="text" id="fb" name="fb" value="facebook.com/shans">
+          <input class="input__input input__input--without-label" type="text" id="fb" name="fb" placeholder="facebook.com/" required>
         </div>
         <div class="input input--logo input--instagram form__input-item">
-          <input class="input__input" type="text" id="instagram" name="instagram" value="instagram.com/shans">
+          <input class="input__input input__input--without-label" type="text" id="instagram" name="instagram" placeholder="instagram.com" required>
         </div>
         <div class="input input--logo input--youtube form__input-item">
-          <input class="input__input" type="text" id="youtube" name="youtube" value="youtube.com/shans">
+          <input class="input__input input__input--without-label" type="text" id="youtube" name="youtube" placeholder="youtube.com/" required>
         </div>
         <div class="input form__input-item">
           <label class="input__label" for="supervisor">Руководитель</label>
-          <input class="input__input" type="text" id="supervisor" name="supervisor" value="Александров Иван Васильевич">
+          <input class="input__input" type="text" id="supervisor" name="supervisor" placeholder="Иванов Иван Иванович" required>
         </div>
 
+        <button class="form__submit-button" type="submit">Стать партнёром проекта</button>
+        <div class="form__cancel-wrap">
+          <button class="form__cancel-button">Отменить</button>
+        </div>
       </form>
     </section>
 
