@@ -230,13 +230,13 @@ const sortByTitle = () => {
   switch(sortingSettings.sortByTitle) {
     case null:
       sortingSettings.sortByTitle = SortTypes.HIGH_LOW;
-      return currentPosts.sort((a, b) => a.title.length - b.title.length).slice();
+      return currentPosts.sort((a, b) => (a.title > b.title) ? 1 : -1).slice();
     case SortTypes.HIGH_LOW:
       sortingSettings.sortByTitle = SortTypes.LOW_HIGH;
-      return currentPosts.sort((a, b) => b.title.length - a.title.length).slice();
+      return currentPosts.sort((a, b) => (b.title > a.title) ? 1 : -1).slice();
     case SortTypes.LOW_HIGH:
       sortingSettings.sortByTitle = SortTypes.HIGH_LOW;
-      return currentPosts.sort((a, b) => a.title.length - b.title.length).slice();
+      return currentPosts.sort((a, b) => (a.title > b.title) ? 1 : -1).slice();
   }
 };
 
@@ -249,12 +249,14 @@ const sortByBody = () => {
   switch(sortingSettings.sortByBody) {
     case null:
       sortingSettings.sortByBody = SortTypes.HIGH_LOW;
-      return currentPosts.sort((a, b) => a.body.length - b.body.length).slice();
+      return currentPosts.sort((a, b) => (a.body > b.body) ? 1 : -1).slice();
     case SortTypes.HIGH_LOW:
       sortingSettings.sortByBody = SortTypes.LOW_HIGH;
-      return currentPosts.sort((a, b) => b.body.length - a.body.length).slice();
+      return currentPosts.sort((a, b) => (b.body > a.body) ? 1 : -1).slice();
     case SortTypes.LOW_HIGH:
       sortingSettings.sortByBody = SortTypes.HIGH_LOW;
-      return currentPosts.sort((a, b) => a.body.length - b.body.length).slice();
+      return currentPosts.sort((a, b) => (a.body > b.body) ? 1 : -1).slice();
   }
 };
+
+

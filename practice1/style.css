@@ -227,7 +227,11 @@ body {
   border-radius: 50%;
   width: 166px;
   height: 166px;
-  background: url("./images/avatar.png") 50% 20% no-repeat #000000;
+  background-image: url("./images/avatar.png");
+  background-position: 50% 20%;
+  background-repeat: no-repeat;
+  background-color: #ffffff;
+  background-size: 200px auto;
   position: relative;
 }
 

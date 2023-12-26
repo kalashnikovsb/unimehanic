@@ -1,7 +1,12 @@
 const openPopupButton = document.querySelector('.show-popup');
 const closePopupButton = document.querySelector('.close-popup');
+const avatarInput = document.querySelector('.avatar__input');
+const avatarInputWrap = document.querySelector('.avatar__input-wrap');
+const avatarButton = document.querySelector('.avatar__button');
 const popup = document.querySelector('.popup');
 const closeLink = popup.querySelector('.form__cancel-button');
+
+const FILE_TYPES = ['jpg', 'jpeg', 'png'];
 
 
 // Открытие закрытие попапа:
@@ -28,6 +33,30 @@ const escPressHandler = (evt) => {
 
 openPopupButton.addEventListener('click', openPopup);
 closePopupButton.addEventListener('click', closePopup);
+
+
+// Вставка аватара
+
+avatarInput.addEventListener('change', () => {
+  const file = avatarInput.files[0];
+  const fileName = file.name.toLowerCase();
+  const matches = FILE_TYPES.some((fileType) => {
+    return fileName.endsWith(fileType);
+  });
+
+  if(matches) {
+    const reader = new FileReader();
+    reader.addEventListener('load', () => {
+      avatarInputWrap.style.backgroundImage = `url(${reader.result})`;
+    });
+    reader.readAsDataURL(file);
+  }
+});
+
+
+avatarButton.addEventListener('click', () => {
+  avatarInputWrap.style.backgroundImage = 'url()';
+});
 
 
 // Валидация номера телефона
