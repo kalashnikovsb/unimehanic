@@ -37,9 +37,18 @@ closePopupButton.addEventListener('click', closePopup);
 
 // Вставка аватара
 
+
+
 avatarInput.addEventListener('change', () => {
   const file = avatarInput.files[0];
+
+  if (!file) {
+    return;
+  }
+
   const fileName = file.name.toLowerCase();
+  
+
   const matches = FILE_TYPES.some((fileType) => {
     return fileName.endsWith(fileType);
   });
@@ -56,6 +65,7 @@ avatarInput.addEventListener('change', () => {
 
 avatarButton.addEventListener('click', () => {
   avatarInputWrap.style.backgroundImage = 'url()';
+  avatarInput.value = '';
 });
 
 
